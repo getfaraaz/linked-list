@@ -2,22 +2,18 @@ class Node:
     def __init__(self, data):
         self.data = data
         self.next = None
- 
- 
+
+
 class LinkedList:
     def __init__(self):
         self.head = None
- 
-    
- 
+
     def push(self, new_data):  # make new node and add
         new_node = Node(new_data)
         new_node.next = self.head
         self.head = new_node
- 
- 
-    
-    def search(self,x):
+
+    def search(self, x):
         position = 1
         p = self.head
         while p is not None:
@@ -27,13 +23,10 @@ class LinkedList:
             position += 1
             p = p.next
         else:
-            print(x,'Not found in list')
+            print(x, 'Not found in list')
             return False
 
 
-
- 
- 
 # Driver Code
 if __name__ == "__main__":
     llist = LinkedList()
@@ -45,8 +38,5 @@ if __name__ == "__main__":
     # llist.getNth(llist,int(input()))
     # Enter the node position here
     # first argument is instance of LinkedList
- 
-    llist.search(4)
-  
 
-    
+    llist.search(4)
